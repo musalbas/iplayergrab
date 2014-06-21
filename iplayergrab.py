@@ -2,7 +2,7 @@ import os
 import time
 import urllib2
 
-INTERVAL = 60 * 30 # 30 minutes
+INTERVAL = None
 
 CATEGORIES = [
     'arts',
@@ -66,6 +66,9 @@ if __name__ == '__main__':
             filestream.write(urllib2.urlopen(BASEURL + url).read())
             filestream.close()
 
-        print
-        time.sleep(INTERVAL)
+        if INTERVAL is not None:
+            print
+            time.sleep(INTERVAL)
+        else:
+            break
 

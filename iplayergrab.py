@@ -48,6 +48,7 @@ if __name__ == '__main__':
 
     for category in CATEGORIES:
         urls.append("iplayer/categories/" + category)
+        urls.append("iplayer/categories/" + category + "/all?sort=dateavailable")
 
     urls.append("iplayer/group/most-popular")
     urls.append("iplayer")
